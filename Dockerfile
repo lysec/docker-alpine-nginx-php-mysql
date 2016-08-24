@@ -4,10 +4,10 @@ ENV TERM xterm
 
 RUN apk add --update curl wget git mysql mysql-client \
   bash nginx ca-certificates \
-  php-fpm php-json php-zlib php-xml php-pdo php-phar php-openssl \
-  php-pdo_mysql php-mysqli \
-  php-gd php-iconv php-mcrypt \
-  php-curl php-openssl php-json php-dom php-ctype && \
+  php5-fpm php5-json php5-zlib php5-xml php5-pdo php5-phar php5-openssl \
+  php5-pdo_mysql php5-mysqli \
+  php5-gd php5-iconv php5-mcrypt \
+  php5-curl php5-openssl php5-json php5-dom php5-ctype && \
   apk add -u musl && \
   mkdir -p /var/lib/mysql && \
   mkdir -p /etc/mysql/conf.d && \
