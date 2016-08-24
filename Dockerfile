@@ -21,10 +21,12 @@ ADD files/php-fpm.conf /etc/php/
 ADD files/my.cnf /etc/mysql/
 ADD files/default.conf /etc/nginx/conf.d/
 ADD files/run.sh /
+ADD application /data/htdocs/
+
 RUN chmod +x /run.sh
 
-EXPOSE 80
-EXPOSE 3306
+EXPOSE 80 3306
+
 WORKDIR /data/htdocs
 VOLUME ["/data/htdocs", "/data/logs", "/var/lib/mysql", "/etc/mysql/conf.d/"]
 CMD ["/run.sh"]
